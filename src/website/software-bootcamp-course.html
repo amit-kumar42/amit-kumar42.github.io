@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProDev Bootcamp</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('./images/generic2.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body class="text-white">
+    <header class="bg-black  py-6 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold text-yellow-300">ProDev Bootcamp</h1>
+            <nav>
+                <ul class="flex space-x-10 text-lg">
+                    <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
+                    <li><a href="#courses" class="hover:text-yellow-300 transition">Courses</a></li>
+                    <li><a href="#mentors" class="hover:text-yellow-300 transition">Mentors</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-300 transition">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mt-20">
+        <!-- Hero Section -->
+        <section class="py-24 text-center " style="background-image: url('./images/hero2.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+            <div class="container mx-auto">
+                <h2 class="text-5xl font-extrabold text-yellow-300 mb-6">Achieve Your Tech Dreams</h2>
+                <p class="text-xl text-gray-200 mb-10">Join the Viduz's software bootcamp designed for the innovators of tomorrow.</p>
+                <a href="#courses" class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Explore Now</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-gray-800 bg-opacity-80 ">
+            <div class="container mx-auto text-center">
+                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Why Choose Us?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-2xl font-semibold text-yellow-300 mb-4">Industry Projects</h4>
+                        <p class="text-lg text-gray-200">Build real-world projects guided by global mentors with hands-on expertise.</p>
+                    </div>
+                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-2xl font-semibold text-yellow-300 mb-4">Career Advancement</h4>
+                        <p class="text-lg text-gray-200">Master technical, business, and project management skills with expert guidance.</p>
+                    </div>
+                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-2xl font-semibold text-yellow-300 mb-4">Tailored Learning</h4>
+                        <p class="text-lg text-gray-200">Structured programs designed for freshers, developers, and entrepreneurs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-24" style="background-image: url('./images/world\ image.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+            <div class="container mx-auto text-center">
+                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Our Courses</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-2xl font-semibold text-yellow-300 mb-8">Beginner Track</h4>
+                        <p class="text-lg text-gray-200 mb-8">Train in real-world tools, project environments, and essential professional skills to become a product and team-fit developer.</p>
+                        <a href="sb-beginner-track.html" class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Details</a>
+                    </div>
+                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-2xl font-semibold text-yellow-300 mb-8">Intermediate Track</h4>
+                        <p class="text-lg text-gray-200 mb-8">Master project delivery, user interaction, and business insights while learning to manage and execute projects independently.</p>
+                        <a href="sb-intermediate-track.html" class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Details</a>
+                    </div>
+                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-2xl font-semibold text-yellow-300 mb-8">Advanced Track</h4>
+                        <p class="text-lg text-gray-200 mb-8">From AI integration to business strategy, learn to design scalable products, craft investment pitches, and lead your own ventures.</p>
+                        <a  class="bg-yellow-800 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition disabled:pointer-events-disable">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mentors Section -->
+        <section id="mentors" class="py-24 bg-gray-800 bg-opacity-80 ">
+        <!-- bg-gradient-to-t from-gray-900 via-gray-800 to-gray-900"> -->
+            <div class="container mx-auto text-center">
+                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Meet Our Mentors</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <a href="ekavakra-profile.html" class="block">
+                        <div class="bg-gray-800 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/ekavakra.webp" alt="Ekavakra" class="w-32 h-32 mx-auto rounded-full mb-6">
+                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Ekavakra Vagare</h4>
+                            <p class="text-sm text-gray-200">Tech Lead  | 5+ years of experience</p>
+                        </div>
+                    </a>
+                
+                    <a href="amit-profile.html" class="block">
+                        <div class="bg-gray-800 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/amit.webp" alt="Amit Kumar" class=" h-32 mx-auto rounded-full mb-6">
+                            <h4 class="text-2xl font-semibold text-yellow-300">Amit Kumar</h4>
+                            <p class="text-sm text-gray-200">DevOps Engineer  | 3+ years of experience</p>
+                        </div> 
+                    </a>
+                    <a href="rishab-profile.html" class="block">
+                        <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/rishab.webp" alt="Rishab Kushawah" class="w-32 h-32 mx-auto rounded-full mb-6">
+                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Rishab Kushawah</h4>
+                            <p class="text-sm text-gray-200">Assistand Professor  | 1+ years of experience</p>
+                        </div>
+                    </a>
+                    <a href="krishna-profile.html" class="block">
+                        <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/krishna.webp" alt="Krishna P. Singh" class="w-32 h-32 mx-auto rounded-full mb-6">
+                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Krishna P. Singh</h4>
+                            <p class="text-sm text-gray-200">Business Risk Analyst   | 1+ years of experience</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24" style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+            <div class="container mx-auto text-center">
+                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Get in Touch</h3>
+                <form class="max-w-lg mx-auto">
+                    <div class="mb-6">
+                        <input type="text" placeholder="Your Name" class="w-full p-4 bg-gray-800 bg-opacity-80 rounded-lg text-white">
+                    </div>
+                    <div class="mb-6">
+                        <input type="email" placeholder="Your Email" class="w-full p-4 bg-gray-800 bg-opacity-80 rounded-lg text-white">
+                    </div>
+                    <div class="mb-6">
+                        <textarea placeholder="Your Message" class="w-full p-4 bg-gray-800 bg-opacity-80 rounded-lg text-white"></textarea>
+                    </div>
+                    <button class="bg-yellow-500 text-black py-3 px-8 rounded-full font-bold hover:bg-yellow-600 transition">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-sm text-yellow-300">&copy; 2024 ProDev Bootcamp. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

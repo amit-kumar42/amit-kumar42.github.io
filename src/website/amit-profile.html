@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Profile - Amit Kumar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('./images/generic2.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body class="text-white">
+    <header class="bg-black py-6 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold text-yellow-300">ProDev Bootcamp</h1>
+            <nav>
+                <ul class="flex space-x-10 text-lg">
+                    <li><a href="software-bootcamp-course.html" class="hover:text-yellow-300 transition">Home</a></li>
+                    <li><a href="#other-mentors" class="hover:text-yellow-300 transition">Other Mentors</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mt-20">
+        <!-- Mentor Profile Section -->
+        <section class="py-24">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center md:items-start bg-gray-800 bg-opacity-90 p-8 rounded-lg shadow-lg">
+                    <!-- Profile Picture -->
+                    <div class="flex-shrink-0">
+                        <img src="./images/amit.webp" alt="Amit Kumar" class="w-48 h-48 rounded-full shadow-lg mb-6 md:mb-0">
+                    </div>
+                    <!-- Mentor Details -->
+                    <div class="ml-0 md:ml-12 text-center md:text-left">
+                        <h2 class="text-4xl font-bold text-yellow-300 mb-4">Amit Kumar</h2>
+                        <p class="text-lg text-gray-200 mb-6">DevOps Engineer | 3+ years of experience</p>
+                        <p class="text-gray-300 text-base mb-6">
+                            Amit Kumar is a talented DevOps Engineer specializing in CI/CD pipelines, cloud infrastructure, and system automation. He has extensive experience working with tools like Docker, Kubernetes, Jenkins, and AWS to build scalable and secure platforms.
+                        </p>
+                        <div class="flex justify-center md:justify-start space-x-4 mb-6">
+                            <a href="https://linkedin.com/in/amit" target="_blank" class="text-yellow-300 hover:text-yellow-500 transition"><i class="fab fa-linkedin text-2xl"></i> LinkedIn</a>
+                            <a href="https://github.com/amit" target="_blank" class="text-yellow-300 hover:text-yellow-500 transition"><i class="fab fa-github text-2xl"></i> GitHub</a>
+                            <a href="mailto:amit@example.com" class="text-yellow-300 hover:text-yellow-500 transition"><i class="fas fa-envelope text-2xl"></i> Email</a>
+                        </div>
+                        <a href="https://amit-portfolio.com" target="_blank" class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Visit Portfolio</a>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Mentors Section -->
+        <section id="other-mentors" class="py-24 bg-gray-900 bg-opacity-90">
+            <div class="container mx-auto text-center">
+                <h3 class="text-4xl font-bold text-yellow-300 text-center mb-12">Other Mentors</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <a href="ekavakra-profile.html" class="block">
+                        <div class="bg-gray-800 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/ekavakra.webp" alt="Ekavakra Vagare" class="w-32 h-32 mx-auto rounded-full mb-6">
+                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Ekavakra Vagare</h4>
+                            <p class="text-sm text-gray-200">Tech Lead | 5+ years of experience</p>
+                        </div>
+                    </a>
+                    <a href="rishab-profile.html" class="block">
+                        <div class="bg-gray-800 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/rishab.webp" alt="Rishab Kushawah" class="w-32 h-32 mx-auto rounded-full mb-6">
+                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Rishab Kushawah</h4>
+                            <p class="text-sm text-gray-200">Assistant Professor | 1+ years of experience</p>
+                        </div>
+                    </a>
+                    <a href="krishna-profile.html" class="block">
+                        <div class="bg-gray-800 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/krishna.webp" alt="Krishna P. Singh" class="w-32 h-32 mx-auto rounded-full mb-6">
+                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Krishna P. Singh</h4>
+                            <p class="text-sm text-gray-200">Business Risk Analyst | 1+ years of experience</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-sm text-yellow-300">&copy; 2024 ProDev Bootcamp. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
