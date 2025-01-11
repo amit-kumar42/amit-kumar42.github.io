@@ -97,29 +97,25 @@
             <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8 md:mb-12 text-center">
                 Fill in Your Details
             </h3>
-            <form>
+            <form  action="https://formspree.io/f/xeoorbja" method="POST">
                 <!-- Personal Information -->
                 <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Personal Information</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                     <div>
                         <label for="full-name" class="block text-gray-200 mb-2">Full Name</label>
-                        <input type="text" id="full-name" class="w-full p-3 rounded" placeholder="Enter your full name"
-                            required>
+                        <input type="text" id="full-name" name="full-name" class="w-full p-3 rounded" placeholder="Enter your full name" required>
                     </div>
                     <div>
                         <label for="email" class="block text-gray-200 mb-2">Email Address</label>
-                        <input type="email" id="email" class="w-full p-3 rounded" placeholder="Enter your email address"
-                            required>
+                        <input type="email" id="email" name="email" class="w-full p-3 rounded" placeholder="Enter your email address" required>
                     </div>
                     <div>
                         <label for="phone" class="block text-gray-200 mb-2">Phone Number</label>
-                        <input type="tel" id="phone" class="w-full p-3 rounded" placeholder="Enter your phone number"
-                            required>
+                        <input type="tel" id="phone" name="phone" class="w-full p-3 rounded" placeholder="Enter your phone number" required>
                     </div>
                     <div>
                         <label for="location" class="block text-gray-200 mb-2">Current Location</label>
-                        <input type="text" id="location" class="w-full p-3 rounded" placeholder="City, State, Country"
-                            required>
+                        <input type="text" id="location" name="location" class="w-full p-3 rounded" placeholder="City, State, Country" required>
                     </div>
                 </div>
 
@@ -128,12 +124,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                     <div>
                         <label for="current-role" class="block text-gray-200 mb-2">Current Role</label>
-                        <input type="text" id="current-role" class="w-full p-3 rounded"
-                            placeholder="Enter your current role" required>
+                        <input type="text" id="current-role" name="current-role" class="w-full p-3 rounded" placeholder="Enter your current role" required>
                     </div>
                     <div>
                         <label for="experience" class="block text-gray-200 mb-2">Years of Experience</label>
-                        <select id="experience" class="w-full p-3 rounded" required>
+                        <select id="experience" name="experience" class="w-full p-3 rounded" required>
                             <option value="0-1 years">0-1 years</option>
                             <option value="1-2 years">1-2 years</option>
                             <option value="2-3 years">2-3 years</option>
@@ -142,8 +137,7 @@
                     </div>
                     <div class="col-span-1 md:col-span-2">
                         <label for="projects" class="block text-gray-200 mb-2">Previous Projects</label>
-                        <textarea id="projects" class="w-full p-3 rounded" rows="3"
-                            placeholder="Describe your key projects or responsibilities"></textarea>
+                        <textarea id="projects" name="projects" class="w-full p-3 rounded" rows="3" placeholder="Describe your key projects or responsibilities"></textarea>
                     </div>
                 </div>
 
@@ -152,23 +146,19 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                     <div>
                         <label for="frontend-skills" class="block text-gray-200 mb-2">Frontend Development</label>
-                        <input type="number" id="frontend-skills" class="w-full p-3 rounded"
-                            placeholder="Rate from 1 to 5" min="1" max="5" required>
+                        <input type="number" id="frontend-skills" name="frontend-skills" class="w-full p-3 rounded" placeholder="Rate from 1 to 5" min="1" max="5" required>
                     </div>
                     <div>
                         <label for="backend-skills" class="block text-gray-200 mb-2">Backend Development</label>
-                        <input type="number" id="backend-skills" class="w-full p-3 rounded"
-                            placeholder="Rate from 1 to 5" min="1" max="5" required>
+                        <input type="number" id="backend-skills" name="backend-skills" class="w-full p-3 rounded" placeholder="Rate from 1 to 5" min="1" max="5" required>
                     </div>
                     <div>
                         <label for="database-skills" class="block text-gray-200 mb-2">Database Management</label>
-                        <input type="number" id="database-skills" class="w-full p-3 rounded"
-                            placeholder="Rate from 1 to 5" min="1" max="5" required>
+                        <input type="number" id="database-skills" name="database-skills" class="w-full p-3 rounded" placeholder="Rate from 1 to 5" min="1" max="5" required>
                     </div>
                     <div>
                         <label for="tools" class="block text-gray-200 mb-2">Other Tools/Technologies</label>
-                        <textarea id="tools" class="w-full p-3 rounded" rows="2"
-                            placeholder="List any additional tools or technologies"></textarea>
+                        <textarea id="tools" class="w-full p-3 rounded" name="tools" rows="2" placeholder="List any additional tools or technologies"></textarea>
                     </div>
                 </div>
 

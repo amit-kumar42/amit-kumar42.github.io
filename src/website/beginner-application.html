@@ -100,28 +100,28 @@
             style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
             <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8 md:mb-12 text-center">Fill in Your Details
             </h3>
-            <form>
+            <form
+                 action="https://formspree.io/f/mgvvnbdl"
+                 method="POST"
+            >
                 <!-- Personal Information -->
                 <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Personal Information</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                     <div>
                         <label for="full-name" class="block text-gray-200 mb-2">Full Name</label>
-                        <input type="text" id="full-name" class="w-full p-3 rounded" placeholder="Enter your full name"
-                            required>
+                        <input type="text" id="full-name" name="full-name" class="w-full p-3 rounded" placeholder="Enter your full name" required>
                     </div>
                     <div>
                         <label for="email" class="block text-gray-200 mb-2">Email Address</label>
-                        <input type="email" id="email" class="w-full p-3 rounded" placeholder="Enter your email address"
-                            required>
+                        <input type="email" id="email" name="email" class="w-full p-3 rounded" placeholder="Enter your email address" required>
                     </div>
                     <div>
                         <label for="phone" class="block text-gray-200 mb-2">Phone Number</label>
-                        <input type="tel" id="phone" class="w-full p-3 rounded" placeholder="Enter your phone number"
-                            required>
+                        <input type="tel" id="phone" name="phone" class="w-full p-3 rounded" placeholder="Enter your phone number" required>
                     </div>
                     <div>
                         <label for="dob" class="block text-gray-200 mb-2">Date of Birth</label>
-                        <input type="date" id="dob" class="w-full p-3 rounded" required>
+                        <input type="date" id="dob" name="dob" class="w-full p-3 rounded" required>
                     </div>
                 </div>
 
@@ -138,8 +138,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div>
                             <label for="college" class="block text-gray-200 mb-2">College/University</label>
-                            <input type="text" id="college" class="w-full p-3 rounded"
-                                placeholder="Enter your college/university">
+                            <input type="text" id="college" name="college" class="w-full p-3 rounded" placeholder="Enter your college/university">
                         </div>
                         <div>
                             <label for="year-of-study" class="block text-gray-200 mb-2">Year of Study</label>
@@ -152,8 +151,7 @@
                         </div>
                         <div>
                             <label for="field-of-study" class="block text-gray-200 mb-2">Field of Study</label>
-                            <input type="text" id="field-of-study" class="w-full p-3 rounded"
-                                placeholder="Field of Study">
+                            <input type="text" id="field-of-study" name="field-of-study" class="w-full p-3 rounded" placeholder="Field of Study">
                         </div>
                     </div>
                 </div>
@@ -161,8 +159,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div>
                             <label for="current-role" class="block text-gray-200 mb-2">Current Role</label>
-                            <input type="text" id="current-role" class="w-full p-3 rounded"
-                                placeholder="Enter your current role">
+                            <input type="text" id="current-role" name="current-role" class="w-full p-3 rounded" placeholder="Enter your current role">
                         </div>
                         <div>
                             <label for="experience" class="block text-gray-200 mb-2">Years of Experience</label>
@@ -181,35 +178,35 @@
                     <!-- Skills sections here (e.g., Programming, Frontend, Backend) -->
                     <div>
                         <label for="programming-skills" class="block text-gray-200 mb-2">Programming</label>
-                        <input type="range" id="programming-skills" name="programming" min="1" max="5" step="1"
+                        <input type="range" id="programming-skills" name="programming-skills"  min="1" max="5" step="1"
                             value="3" class="w-full">
                         <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
                                 id="programming-value">3</span>/5</div>
                     </div>
                     <div>
                         <label for="frontend-skills" class="block text-gray-200 mb-2">Frontend Development</label>
-                        <input type="range" id="frontend-skills" name="frontend" min="1" max="5" step="1" value="3"
+                        <input type="range" id="frontend-skills" name="frontend-skills" min="1" max="5" step="1" value="3"
                             class="w-full">
                         <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
                                 id="frontend-value">3</span>/5</div>
                     </div>
                     <div>
                         <label for="backend-skills" class="block text-gray-200 mb-2">Backend Development</label>
-                        <input type="range" id="backend-skills" name="backend" min="1" max="5" step="1" value="3"
+                        <input type="range" id="backend-skills" name="backend-skills"  min="1" max="5" step="1" value="3"
                             class="w-full">
                         <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
                                 id="backend-value">3</span>/5</div>
                     </div>
                     <div>
                         <label for="version-control-skills" class="block text-gray-200 mb-2">Version Control</label>
-                        <input type="range" id="version-control-skills" name="version" min="1" max="5" step="1"
+                        <input type="range" id="version-control-skills" name="version-control-skills"  min="1" max="5" step="1"
                             value="3" class="w-full">
                         <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
                                 id="version-value">3</span>/5</div>
                     </div>
                     <div>
                         <label for="database-skills" class="block text-gray-200 mb-2">Database Skills</label>
-                        <input type="range" id="database-skills" name="database" min="1" max="5" step="1" value="3"
+                        <input type="range" id="database-skills" name="database-skills"  min="1" max="5" step="1" value="3"
                             class="w-full">
                         <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
                                 id="database-value">3</span>/5</div>

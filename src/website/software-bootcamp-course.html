@@ -212,19 +212,19 @@
             style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
             <div class="container mx-auto text-center">
                 <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8 md:mb-12">Get in Touch</h3>
-                <form class="max-w-md md:max-w-lg mx-auto">
+                <form class="max-w-md md:max-w-lg mx-auto" action="https://formspree.io/f/xwpprdew" method="POST">
                     <div class="mb-4 md:mb-6">
-                        <input type="text" placeholder="Your Name"
+                        <input type="text" placeholder="Your Name" name= "name"
                             class="w-full p-3 md:p-4 bg-gray-800 bg-opacity-80 rounded-lg text-sm md:text-lg text-white"
                             required />
                     </div>
                     <div class="mb-4 md:mb-6">
-                        <input type="email" placeholder="Your Email"
+                        <input type="email" placeholder="Your Email" name= "email"
                             class="w-full p-3 md:p-4 bg-gray-800 bg-opacity-80 rounded-lg text-sm md:text-lg text-white"
                             required />
                     </div>
                     <div class="mb-4 md:mb-6">
-                        <textarea placeholder="Your Message"
+                        <textarea placeholder="Your Message" name="message"
                             class="w-full p-3 md:p-4 bg-gray-800 bg-opacity-80 rounded-lg text-sm md:text-lg text-white"
                             required></textarea>
                     </div>
