@@ -129,9 +129,8 @@
                 <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Background Information</h4>
                 <div class="mb-6">
                     <div class="flex flex-col md:flex-row md:space-x-4">
-                        <button type="button" class="tab-button active" onclick="showTab('student')">Student</button>
-                        <button type="button" class="tab-button" onclick="showTab('professional')">Fresher
-                            Professional</button>
+                        <button type="button" name="student" class="tab-button active" onclick="showTab('student')">Student</button>
+                        <button type="button" name="professional" class="tab-button" onclick="showTab('professional')">Professional</button>
                     </div>
                 </div>
                 <div id="student" class="tab-content mb-8 md:mb-12">
@@ -142,7 +141,7 @@
                         </div>
                         <div>
                             <label for="year-of-study" class="block text-gray-200 mb-2">Year of Study</label>
-                            <select id="year-of-study" class="w-full p-3 rounded">
+                            <select id="year-of-study" name="year-of-study" class="w-full p-3 rounded">
                                 <option value="1st Year">1st Year</option>
                                 <option value="2nd Year">2nd Year</option>
                                 <option value="3rd Year">3rd Year</option>
@@ -163,7 +162,7 @@
                         </div>
                         <div>
                             <label for="experience" class="block text-gray-200 mb-2">Years of Experience</label>
-                            <select id="experience" class="w-full p-3 rounded" required>
+                            <select id="experience" name="experience" class="w-full p-3 rounded" required>
                                 <option value="0-1 years">0-1 years</option>
                                 <option value="1-2 years">1-2 years</option>
                                 <option value="2+ years">2+ years</option>
@@ -237,7 +236,7 @@
                 <div class="mb-8 md:mb-12">
                     <label for="additional-skills" class="block text-gray-200 mb-2">Any Additional Skills /
                         Projects</label>
-                    <textarea id="additional-skills" class="w-full p-3 rounded" placeholder="Mention any other skills"
+                    <textarea id="additional-skills" name="additional-skills" class="w-full p-3 rounded" placeholder="Mention any other skills"
                         rows="3"></textarea>
                 </div>
 
