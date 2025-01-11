@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,87 +15,159 @@
             background-blend-mode: multiply;
             background-color: rgba(0, 0, 0, 0.8);
         }
-        .list-disc,
+
+        /* .list-disc,
         .list-decimal {
             list-style-position: outside;
             margin-left: 5rem;
-        }
-    
+        } */
     </style>
 </head>
+
 <body class="text-white">
-    <header class="bg-black py-6 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-4xl font-bold text-yellow-300">ProDev Bootcamp</h1>
-            <nav>
-                <ul class="flex space-x-10 text-lg">
-                    <li><a href="software-bootcamp-course.html" class="hover:text-yellow-300 transition">Home</a></li>
-                    <li><a href="#overview" class="hover:text-yellow-300 transition">Overview</a></li>
-                    <li><a href="#benefits" class="hover:text-yellow-300 transition">Benefits</a></li>
-                    <li><a href="#details" class="hover:text-yellow-300 transition">Details</a></li>
-                    <li><a href="#apply" class="hover:text-yellow-300 transition">Apply Now</a></li>
+    <header class="bg-black py-4 md:py-6 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logo -->
+            <a href="software-bootcamp-course.html" class="flex items-center space-x-3">
+                <img src="./images/logo.png" alt="ProDev Bootcamp Logo" class="h-10 md:h-12">
+                <h1 class="text-2xl md:text-4xl font-bold text-yellow-300">ProDev Bootcamp</h1>
+            </a>
+
+            <!-- Hamburger Menu Button -->
+            <button id="menu-button"
+                class="flex flex-col space-y-1.5 w-8 h-8 justify-center items-center md:hidden focus:outline-none">
+                <span class="block w-8 h-1 bg-yellow-300 transition-transform transform origin-center"></span>
+                <span class="block w-8 h-1 bg-yellow-300 transition-transform transform origin-center"></span>
+                <span class="block w-8 h-1 bg-yellow-300 transition-transform transform origin-center"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="menu"
+                class="hidden absolute top-16 left-0 w-full bg-black text-center md:relative md:top-0 md:flex md:w-auto">
+                <ul class="space-y-4 md:space-y-0 md:flex md:space-x-8 text-lg">
+                    <li><a href="software-bootcamp-course.html"
+                            class="block md:inline text-yellow-300 hover:text-yellow-400 transition">Home</a></li>
+                    <li><a href="#overview"
+                            class="block md:inline text-yellow-300 hover:text-yellow-400 transition">Overview</a></li>
+                    <li><a href="#benefits"
+                            class="block md:inline text-yellow-300 hover:text-yellow-400 transition">Benefits</a></li>
+                    <li><a href="#details"
+                            class="block md:inline text-yellow-300 hover:text-yellow-400 transition">Details</a></li>
+                    <li><a href="#apply" class="block md:inline text-yellow-300 hover:text-yellow-400 transition">Apply
+                            Now</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const menu = document.getElementById("menu");
+
+        // Toggle menu visibility
+        menuButton.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menuButton.classList.toggle("open");
+
+            // Animate Hamburger Icon
+            const spans = menuButton.querySelectorAll("span");
+            spans[0].classList.toggle("rotate-45");
+            spans[0].classList.toggle("translate-y-2.5");
+            spans[1].classList.toggle("opacity-0");
+            spans[2].classList.toggle("-rotate-45");
+            spans[2].classList.toggle("-translate-y-2.5");
+        });
+    </script>
+
+
     <main class="mt-20">
         <!-- Hero Section -->
-        <section class="text-center py-24" style="background-image: url('./images/hero2.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
-            <div class="container mx-auto">
-                <h2 class="text-5xl font-extrabold text-yellow-300 mb-6">Beginner Track</h2>
+        <section class="text-center md:py-32 text-center bg-cover bg-center py-24"
+            style="background-image: url('./images/hero2.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-yellow-300 mb-6 leading-tight">Beginner Track</h2>
                 <p class="text-xl text-gray-200 mb-10">Your Gateway to Professional Software Development</p>
-                <a href="#apply" class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Get Started</a>
+                <a href="#apply"
+                    class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Get
+                    Started</a>
             </div>
         </section>
 
-        <!-- Overview Section -->
-        <section id="overview" class="py-24 bg-gray-800 bg-opacity-80">
+        <section id="overview" class="py-16 md:py-24 bg-gray-800 bg-opacity-80 px-4">
             <div class="container mx-auto text-center">
-                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Why Choose Beginner Track?</h3>
-                <!-- <p class="text-lg text-gray-300">Designed for freshers and aspiring developers, this track builds a solid foundation in software development through hands-on projects, industry-standard tools, and essential professional skills.</p> -->
-                <p class="text-lg text-gray-200">The Beginner Track is designed for freshers and aspiring software developers who are ready to take their first step into the professional world of software development. This track focuses on building a strong foundation in project development, industry tools, and professional skills to make participants product and team ready.</p>
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8 md:mb-12">
+                    Why Choose Beginner Track?
+                </h3>
+                <p class="text-base md:text-lg text-gray-200 leading-relaxed">
+                    The Beginner Track is designed for freshers and aspiring software developers who are ready to take
+                    their
+                    first step into the professional world of software development. This track focuses on building a
+                    strong
+                    foundation in project development, industry tools, and professional skills to make participants
+                    product
+                    and team ready.
+                </p>
             </div>
         </section>
+
 
         <!-- Benefits Section -->
-        <section id="benefits" class="py-24" style="background-image: url('./images/world\ image.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+        <section id="benefits" class="py-16 md:py-24 px-4"
+            style="background-image: url('./images/world image.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
             <div class="container mx-auto">
-                <h3 class="text-4xl font-bold text-yellow-300 mb-6 text-center">What You'll Gain</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8 md:mb-12 text-center">
+                    What You'll Gain
+                </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-3">Hands-On Projects</h4>
-                        <p class="text-gray-200">Build a real-world application, such as a task manager or expense tracker, under mentor guidance.</p>
+                    <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-2 md:mb-3">
+                            Hands-On Projects
+                        </h4>
+                        <p class="text-sm md:text-base text-gray-200 leading-relaxed">
+                            Build a real-world application, such as a task manager or expense tracker, under mentor
+                            guidance.
+                        </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-3">Professional Tools</h4>
-                        <p class="text-gray-200">Get familiar with industry-standard tools for collaborative development and version control.</p>
+                    <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-2 md:mb-3">
+                            Professional Tools
+                        </h4>
+                        <p class="text-sm md:text-base text-gray-200 leading-relaxed">
+                            Get familiar with industry-standard tools for collaborative development and version control.
+                        </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-3">Global Mentorship</h4>
-                        <p class="text-gray-200">Learn from experienced mentors with international expertise and guidance.</p>
+                    <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-md">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-2 md:mb-3">
+                            Global Mentorship
+                        </h4>
+                        <p class="text-sm md:text-base text-gray-200 leading-relaxed">
+                            Learn from experienced mentors with international expertise and guidance.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        
-          <!-- Details Section -->
-        <section id="details" class="py-24 bg-gray-800 bg-opacity-80">
-            <div class="container mx-auto ">
-                <h3 class="text-4xl font-bold text-yellow-300 mb-12 text-center">Program Details</h3>
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 mb-4">
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-3xl font-bold text-yellow-300 mb-4 text-center">Key Highlights</h3>
-                        <ul class="list-disc text-gray-200 text-lg">
+
+
+        <!-- Details Section -->
+        <section id="details" class="py-16 md:py-24 px-4 bg-gray-800 bg-opacity-80">
+            <div class="container mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8 md:mb-12 text-center">
+                    Program Details
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl md:text-3xl font-bold text-yellow-300 mb-4 text-center">Key Highlights</h3>
+                        <ul class="list-disc pl-6 md:pl-8 text-gray-200 text-sm md:text-lg leading-relaxed">
                             <li><strong>Duration:</strong> 4-6 weeks of immersive learning.</li>
                             <li><strong>Commitment:</strong> 15-20 hours per week.</li>
                             <li><strong>Project Focus:</strong> Build a beginner-friendly application.</li>
                             <li><strong>Certification:</strong> Earn a Certificate of Completion.</li>
                         </ul>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-3xl font-bold text-yellow-300 mb-4 text-center">Structure</h3>
-                        <ul class="list-disc text-gray-200 text-lg text-left">
+                    <div class="bg-gray-800 p-4 md:p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl md:text-3xl font-bold text-yellow-300 mb-4 text-center">Structure</h3>
+                        <ul class="list-disc pl-6 md:pl-8 text-gray-200 text-sm md:text-lg leading-relaxed">
                             <li>Interactive live sessions with mentors.</li>
                             <li>Step-by-step project development.</li>
                             <li>Hands-on experience with SDLC fundamentals.</li>
@@ -105,22 +178,34 @@
             </div>
         </section>
 
+
         <!-- Apply Section -->
-        <section id="apply" class="text-center py-24" style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+        <section id="apply" class="text-center py-16 md:py-24 px-4"
+            style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
             <div class="container mx-auto">
-                <h3 class="text-4xl font-bold text-yellow-300 mb-4">Start Your Journey Today</h3>
-                <p class="text-lg text-gray-200">Limited spots available. Don’t miss the chance to launch your software development career with expert mentorship.</p>
-                <a href="beginner-application.html" class="mt-6 inline-block bg-yellow-500 text-black py-3 px-8 rounded-full font-bold hover:bg-yellow-600 transition">Apply Now</a>
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-4 md:mb-6">
+                    Start Your Journey Today
+                </h3>
+                <p class="text-base md:text-lg text-gray-200 leading-relaxed mb-6 md:mb-8">
+                    Limited spots available. Don’t miss the chance to launch your software development career with
+                    expert mentorship.
+                </p>
+                <a href="beginner-application.html"
+                    class="inline-block bg-yellow-500 text-black py-2 px-6 md:py-3 md:px-8 rounded-full font-bold hover:bg-yellow-600 transition">
+                    Apply Now
+                </a>
             </div>
         </section>
+
     </main>
 
 
-    <footer class="bg-black py-6">
+    <footer class="bg-black py-6 px-4">
         <div class="container mx-auto text-center">
-            <p class="text-sm text-yellow-300">&copy; 2024 ProDev Bootcamp. All Rights Reserved.</p>
+            <p class="text-xs md:text-sm text-yellow-300">&copy; 2024 ProDev Bootcamp. All Rights Reserved.</p>
         </div>
     </footer>
 
 </body>
+
 </html>

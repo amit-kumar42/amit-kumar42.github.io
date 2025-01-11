@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,19 +16,24 @@
             background-color: rgba(0, 0, 0, 0.85);
             color: white;
         }
-        header, footer {
+
+        header,
+        footer {
             background-color: rgba(0, 0, 0, 0.9);
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
         }
+
         section {
             margin-bottom: 2rem;
             padding: 2rem;
             border-radius: 0.5rem;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
         }
+
         .section-light {
             background-color: rgba(31, 41, 55, 0.9);
         }
+
         .tab-button {
             cursor: pointer;
             padding: 0.5rem 1rem;
@@ -35,54 +41,83 @@
             background-color: rgba(75, 85, 99, 0.8);
             color: white;
         }
+
         .tab-button.active {
             background-color: #fbbf24;
             color: #000;
         }
-        input, select, textarea {
+
+        input,
+        select,
+        textarea {
             background-color: rgba(31, 41, 55, 0.9);
             color: white;
         }
-        input::placeholder, textarea::placeholder {
+
+        input::placeholder,
+        textarea::placeholder {
             color: rgba(209, 213, 219, 0.7);
         }
     </style>
 </head>
+
 <body>
-    <header class="py-6 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-4xl font-bold text-yellow-300">ProDev Bootcamp</h1>
-            <a href="software-bootcamp-course.html" class="hover:text-yellow-300 text-lg transition">Home</a>
+    <header class="bg-black py-4 md:py-6 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logo -->
+            <a href="software-bootcamp-course.html" class="flex items-center space-x-3">
+                <img src="./images/logo.png" alt="ProDev Bootcamp Logo" class="h-10 md:h-12">
+                <h1 class="text-2xl md:text-4xl font-bold text-yellow-300">ProDev Bootcamp</h1>
+            </a>
+
+            <!-- Home Link -->
+            <a href="software-bootcamp-course.html"
+                class="text-yellow-300 text-sm md:text-lg font-bold hover:text-yellow-400 transition">
+                Home
+            </a>
         </div>
     </header>
 
+
     <main class="mt-20">
         <!-- Hero Section -->
-        <section class="text-center py-24 bg-gray-800 bg-opacity-90 shadow-lg" style="background-image: url('./images/hero2.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
-            <div class="container mx-auto">
-                <h2 class="text-5xl font-extrabold text-yellow-300 mb-6">Application Form</h2>
-                <p class="text-lg text-gray-300">Take your first step into the professional world of software development by applying for the Beginner Track.</p>
+        <section class="py-24 md:py-32 text-center bg-cover bg-center"
+            style="background-image: url('./images/hero2.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-yellow-300 mb-6 leading-tight">
+                    Application Form
+                </h2>
+                <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+                    Take your first step into the professional world of software development by applying for the
+                    Beginner Track.
+                </p>
             </div>
         </section>
 
+
         <!-- Application Form -->
-        <section class="container py-24 mx-auto bg-gray-800 p-8 rounded-lg section-light max-w-4xl" style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
-            <h3 class="text-3xl font-bold text-yellow-300 mb-12 text-center">Fill in Your Details</h3>
+        <section class="container py-16 md:py-24 px-4 mx-auto bg-gray-800 bg-opacity-90 p-6 md:p-8 rounded-lg max-w-4xl"
+            style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+            <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8 md:mb-12 text-center">Fill in Your Details
+            </h3>
             <form>
                 <!-- Personal Information -->
-                <h4 class="text-2xl font-semibold text-yellow-300 mb-4">Personal Information</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Personal Information</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                     <div>
                         <label for="full-name" class="block text-gray-200 mb-2">Full Name</label>
-                        <input type="text" id="full-name" class="w-full p-3 rounded" placeholder="Enter your full name" required>
+                        <input type="text" id="full-name" class="w-full p-3 rounded" placeholder="Enter your full name"
+                            required>
                     </div>
                     <div>
                         <label for="email" class="block text-gray-200 mb-2">Email Address</label>
-                        <input type="email" id="email" class="w-full p-3 rounded" placeholder="Enter your email address" required>
+                        <input type="email" id="email" class="w-full p-3 rounded" placeholder="Enter your email address"
+                            required>
                     </div>
                     <div>
                         <label for="phone" class="block text-gray-200 mb-2">Phone Number</label>
-                        <input type="tel" id="phone" class="w-full p-3 rounded" placeholder="Enter your phone number" required>
+                        <input type="tel" id="phone" class="w-full p-3 rounded" placeholder="Enter your phone number"
+                            required>
                     </div>
                     <div>
                         <label for="dob" class="block text-gray-200 mb-2">Date of Birth</label>
@@ -91,39 +126,43 @@
                 </div>
 
                 <!-- Background Information -->
-                <h4 class="text-2xl font-semibold text-yellow-300 mb-4">Background Information</h4>
+                <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Background Information</h4>
                 <div class="mb-6">
-                    <div class="flex space-x-4">
+                    <div class="flex flex-col md:flex-row md:space-x-4">
                         <button type="button" class="tab-button active" onclick="showTab('student')">Student</button>
-                        <button type="button" class="tab-button" onclick="showTab('professional')">Fresher Professional</button>
+                        <button type="button" class="tab-button" onclick="showTab('professional')">Fresher
+                            Professional</button>
                     </div>
                 </div>
-                <div id="student" class="tab-content mb-12">
-                    <!-- <h5 class="text-xl font-semibold text-gray-200 mb-4">Student Details</h5> -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div id="student" class="tab-content mb-8 md:mb-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div>
                             <label for="college" class="block text-gray-200 mb-2">College/University</label>
-                            <input type="text" id="college" class="w-full p-3 rounded" placeholder="Enter your college/university">
+                            <input type="text" id="college" class="w-full p-3 rounded"
+                                placeholder="Enter your college/university">
                         </div>
                         <div>
                             <label for="year-of-study" class="block text-gray-200 mb-2">Year of Study</label>
                             <select id="year-of-study" class="w-full p-3 rounded">
                                 <option value="1st Year">1st Year</option>
                                 <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
                                 <option value="Final Year">Final Year</option>
                             </select>
                         </div>
                         <div>
                             <label for="field-of-study" class="block text-gray-200 mb-2">Field of Study</label>
-                            <input type="text" id="field-of-study" class="w-full p-3 rounded" placeholder="Field of Study">
+                            <input type="text" id="field-of-study" class="w-full p-3 rounded"
+                                placeholder="Field of Study">
                         </div>
                     </div>
                 </div>
                 <div id="professional" class="tab-content hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div>
                             <label for="current-role" class="block text-gray-200 mb-2">Current Role</label>
-                            <input type="text" id="current-role" class="w-full p-3 rounded" placeholder="Enter your current role">
+                            <input type="text" id="current-role" class="w-full p-3 rounded"
+                                placeholder="Enter your current role">
                         </div>
                         <div>
                             <label for="experience" class="block text-gray-200 mb-2">Years of Experience</label>
@@ -135,65 +174,124 @@
                         </div>
                     </div>
                 </div>
-                <h4 class="text-2xl font-semibold text-yellow-300 mt-8 mb-4">Technical Skills</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
-                        <div>
-                            <label for="programming-skills" class="block text-gray-200 mb-2">Programming (1-5)</label>
-                            <input type="number" id="programming-skills" class="w-full p-3 rounded" min="1" max="5">
-                        </div>
-                        <div>
-                            <label for="frontend-skills" class="block text-gray-200 mb-2">Frontend Development (1-5)</label>
-                            <input type="number" id="frontend-skills" class="w-full p-3 rounded" min="1" max="5">
-                        </div>
-                        <div>
-                            <label for="backend-skills" class="block text-gray-200 mb-2">Backend Development (1-5)</label>
-                            <input type="number" id="backend-skills" class="w-full p-3 rounded" min="1" max="5">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
-                        <div>
-                            <label for="version-control-skills" class="block text-gray-200 mb-2">Version Control (1-5)</label>
-                            <input type="number" id="version-control-skills" class="w-full p-3 rounded" min="1" max="5">
-                        </div>
-                        <div>
-                            <label for="database-skills" class="block text-gray-200 mb-2">Database Skills (1-5)</label>
-                            <input type="number" id="database-skills" class="w-full p-3 rounded" min="1" max="5">
-                        </div>
-                    
-                    </div>
-                    <div class="mb-12">
-                        <label for="additional-skills" class="block text-gray-200 mb-2">Any Additional Skills / Projects</label>
-                        <textarea id="additional-skills" class="w-full p-3 rounded" placeholder="Mention any other skills" rows="3"></textarea>
-                    </div>
 
-                <!-- Declaration -->
-                <h4 class="text-2xl font-semibold text-yellow-300 mt-8 mb-4">Declaration</h4>
-                <div>
-                    <label><input type="checkbox" class="mr-2" required> I confirm that the information provided is accurate.</label>
+                <!-- Technical Skills -->
+                <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mt-8 mb-4">Technical Skills</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+                    <!-- Skills sections here (e.g., Programming, Frontend, Backend) -->
+                    <div>
+                        <label for="programming-skills" class="block text-gray-200 mb-2">Programming</label>
+                        <input type="range" id="programming-skills" name="programming" min="1" max="5" step="1"
+                            value="3" class="w-full">
+                        <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
+                                id="programming-value">3</span>/5</div>
+                    </div>
+                    <div>
+                        <label for="frontend-skills" class="block text-gray-200 mb-2">Frontend Development</label>
+                        <input type="range" id="frontend-skills" name="frontend" min="1" max="5" step="1" value="3"
+                            class="w-full">
+                        <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
+                                id="frontend-value">3</span>/5</div>
+                    </div>
+                    <div>
+                        <label for="backend-skills" class="block text-gray-200 mb-2">Backend Development</label>
+                        <input type="range" id="backend-skills" name="backend" min="1" max="5" step="1" value="3"
+                            class="w-full">
+                        <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
+                                id="backend-value">3</span>/5</div>
+                    </div>
+                    <div>
+                        <label for="version-control-skills" class="block text-gray-200 mb-2">Version Control</label>
+                        <input type="range" id="version-control-skills" name="version" min="1" max="5" step="1"
+                            value="3" class="w-full">
+                        <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
+                                id="version-value">3</span>/5</div>
+                    </div>
+                    <div>
+                        <label for="database-skills" class="block text-gray-200 mb-2">Database Skills</label>
+                        <input type="range" id="database-skills" name="database" min="1" max="5" step="1" value="3"
+                            class="w-full">
+                        <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
+                                id="database-value">3</span>/5</div>
+                    </div>
+                    <div>
+                        <label for="devops-skills" class="block text-gray-200 mb-2">DevOps</label>
+                        <input type="range" id="devops-skills" name="devops" min="1" max="5" step="1" value="3"
+                            class="w-full">
+                        <div class="text-gray-200 mt-1 text-sm text-center">Expertise: <span
+                                id="devops-value">3</span>/5</div>
+                    </div>
                 </div>
 
-                <button type="submit" class="bg-yellow-500 text-black font-bold py-3 px-8 rounded mt-12">Submit Application</button>
+                <script>
+                    // Update displayed skill values dynamically
+                    const skillInputs = document.querySelectorAll('input[type="range"]');
+                    skillInputs.forEach(input => {
+                        const valueDisplay = document.getElementById(`${input.id}-value`);
+                        input.addEventListener('input', (event) => {
+                            valueDisplay.textContent = event.target.value;
+                        });
+                    });
+                </script>
+
+                </div>
+
+                <!-- Additional Information -->
+                <div class="mb-8 md:mb-12">
+                    <label for="additional-skills" class="block text-gray-200 mb-2">Any Additional Skills /
+                        Projects</label>
+                    <textarea id="additional-skills" class="w-full p-3 rounded" placeholder="Mention any other skills"
+                        rows="3"></textarea>
+                </div>
+
+                <!-- Declaration -->
+                <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mt-8 mb-4">Declaration</h4>
+                <div>
+                    <label><input type="checkbox" class="mr-2" required> I confirm that the information provided is
+                        accurate.</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="bg-yellow-500 text-black font-bold py-2 px-6 md:py-3 md:px-8 rounded mt-8 md:mt-12 hover:bg-yellow-600 transition">
+                    Submit Application
+                </button>
             </form>
         </section>
+
     </main>
 
-    <footer class="bg-black py-6 shadow-lg">
+<!-- footer -->
+    <footer class="bg-black py-6 px-4">
         <div class="container mx-auto text-center">
-            <p class="text-sm text-yellow-300">&copy; 2024 ProDev Bootcamp. All Rights Reserved.</p>
+            <p class="text-xs md:text-sm text-yellow-300">&copy; 2024 ProDev Bootcamp. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.add('hidden');
-            });
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('active');
-            });
-            document.getElementById(tabName).classList.remove('hidden');
-            document.querySelector(`[onclick="showTab('${tabName}')"]`).classList.add('active');
-        }
-    </script>
+    
 </body>
+
+<script>
+    function showTab(tabName) {
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.add('hidden');
+        });
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.getElementById(tabName).classList.remove('hidden');
+        document.querySelector(`[onclick="showTab('${tabName}')"]`).classList.add('active');
+    }
+</script>
+
+<script>
+    // Update the display value for sliders dynamically
+    document.querySelectorAll('input[type="range"]').forEach(slider => {
+        const valueDisplay = slider.nextElementSibling.querySelector('span');
+        valueDisplay.textContent = slider.value; // Set initial value
+        slider.addEventListener('input', () => {
+            valueDisplay.textContent = slider.value; // Update on change
+        });
+    });
+</script>
+
 </html>

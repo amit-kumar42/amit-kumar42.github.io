@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,139 +17,237 @@
         }
     </style>
 </head>
+
 <body class="text-white">
-    <header class="bg-black  py-6 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-4xl font-bold text-yellow-300">ProDev Bootcamp</h1>
-            <nav>
-                <ul class="flex space-x-10 text-lg">
-                    <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
-                    <li><a href="#courses" class="hover:text-yellow-300 transition">Courses</a></li>
-                    <li><a href="#mentors" class="hover:text-yellow-300 transition">Mentors</a></li>
-                    <li><a href="#contact" class="hover:text-yellow-300 transition">Contact</a></li>
+    <header class="bg-black py-4 fixed w-full top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logo -->
+            <a href="software-bootcamp-course.html" class="flex items-center space-x-3">
+                <img src="./images/logo.png" alt="ProDev Bootcamp Logo" class="h-10 md:h-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-yellow-300">ProDev Bootcamp</h2>
+            </a>
+
+            <!-- Hamburger Menu Button -->
+            <button id="menu-button"
+                class="flex flex-col space-y-1.5 w-8 h-8 justify-center items-center md:hidden focus:outline-none">
+                <span class="block w-8 h-1 bg-yellow-300 transition-transform transform origin-center"></span>
+                <span class="block w-8 h-1 bg-yellow-300 transition-transform transform origin-center"></span>
+                <span class="block w-8 h-1 bg-yellow-300 transition-transform transform origin-center"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="menu"
+                class="hidden absolute top-16 left-0 w-full bg-black text-center md:relative md:top-0 md:flex md:w-auto">
+                <ul id="menu-links" class="space-y-6 py-4 md:space-y-0 md:flex md:space-x-8">
+                    <li><a href="#about" class="text-lg text-yellow-300 hover:text-white transition-all">About</a></li>
+                    <li><a href="#courses" class="text-lg text-yellow-300 hover:text-white transition-all">Courses</a>
+                    </li>
+                    <li><a href="#mentors" class="text-lg text-yellow-300 hover:text-white transition-all">Mentors</a>
+                    </li>
+                    <li><a href="#contact" class="text-lg text-yellow-300 hover:text-white transition-all">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const menu = document.getElementById("menu");
+        const menuLinks = document.getElementById("menu-links").querySelectorAll("a");
+
+        menuButton.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menuButton.classList.toggle("open");
+
+            // Toggle Hamburger Icon Animation
+            const spans = menuButton.querySelectorAll("span");
+            spans[0].classList.toggle("rotate-45");
+            spans[0].classList.toggle("translate-y-2.5");
+            spans[1].classList.toggle("opacity-0");
+            spans[2].classList.toggle("-rotate-45");
+            spans[2].classList.toggle("-translate-y-2.5");
+        });
+
+        // Close menu when a link is clicked
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.add("hidden");
+
+                // Reset Hamburger Icon Animation
+                const spans = menuButton.querySelectorAll("span");
+                spans[0].classList.remove("rotate-45", "translate-y-2.5");
+                spans[1].classList.remove("opacity-0");
+                spans[2].classList.remove("-rotate-45", "-translate-y-2.5");
+            });
+        });
+    </script>
+
+
     <main class="mt-20">
         <!-- Hero Section -->
-        <section class="py-24 text-center " style="background-image: url('./images/hero2.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
-            <div class="container mx-auto">
-                <h2 class="text-5xl font-extrabold text-yellow-300 mb-6">Achieve Your Tech Dreams</h2>
-                <p class="text-xl text-gray-200 mb-10">Join the Viduz's software bootcamp designed for the innovators of tomorrow.</p>
-                <a href="#courses" class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Explore Now</a>
+        <section class="py-24 md:py-32 text-center bg-cover bg-center"
+            style="background-image: url('./images/hero2.webp'); background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-yellow-300 mb-6 leading-tight">
+                    Achieve Your Tech Dreams
+                </h2>
+                <p class="text-lg md:text-2xl text-gray-200 mb-10">
+                    Join the Viduz's software bootcamp designed for the innovators of tomorrow.
+                </p>
+                <a href="#courses"
+                    class="bg-yellow-500 text-black py-3 px-8 rounded-full text-base md:text-lg font-bold hover:bg-yellow-600 transition">
+                    Explore Now
+                </a>
             </div>
         </section>
 
+
         <!-- About Section -->
-        <section id="about" class="py-24 bg-gray-800 bg-opacity-80 ">
+        <section id="about" class="py-24 bg-gray-800 bg-opacity-80 px-4">
             <div class="container mx-auto text-center">
-                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Why Choose Us?</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-4">Industry Projects</h4>
-                        <p class="text-lg text-gray-200">Build real-world projects guided by global mentors with hands-on expertise.</p>
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-12">Why Choose Us?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+                    <div class="bg-gray-800 bg-opacity-80 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Industry Projects</h4>
+                        <p class="text-sm md:text-lg text-gray-200">Build real-world projects guided by global mentors
+                            with hands-on expertise.</p>
                     </div>
-                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-4">Career Advancement</h4>
-                        <p class="text-lg text-gray-200">Master technical, business, and project management skills with expert guidance.</p>
+                    <div class="bg-gray-800 bg-opacity-80 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Career Advancement</h4>
+                        <p class="text-sm md:text-lg text-gray-200">Master technical, business, and project management
+                            skills with expert guidance.</p>
                     </div>
-                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-4">Tailored Learning</h4>
-                        <p class="text-lg text-gray-200">Structured programs designed for freshers, developers, and entrepreneurs.</p>
+                    <div class="bg-gray-800 bg-opacity-80 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Tailored Learning</h4>
+                        <p class="text-sm md:text-lg text-gray-200">Structured programs designed for freshers,
+                            developers, and entrepreneurs.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+
         <!-- Courses Section -->
-        <section id="courses" class="py-24" style="background-image: url('./images/world\ image.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+        <section id="courses" class="py-24 px-4"
+            style="background-image: url('./images/world image.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
             <div class="container mx-auto text-center">
-                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Our Courses</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-8">Beginner Track</h4>
-                        <p class="text-lg text-gray-200 mb-8">Train in real-world tools, project environments, and essential professional skills to become a product and team-fit developer.</p>
-                        <a href="sb-beginner-track.html" class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Details</a>
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-12">Our Courses</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
+                    <div class="bg-gray-800 bg-opacity-80 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Beginner Track</h4>
+                        <p class="text-sm md:text-lg text-gray-200 mb-6">Train in real-world tools, project
+                            environments, and essential professional skills to become a product and team-fit developer.
+                        </p>
+                        <a href="sb-beginner-track.html"
+                            class="bg-yellow-500 text-black py-2 px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg font-bold hover:bg-yellow-600 transition">Details</a>
                     </div>
-                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-8">Intermediate Track</h4>
-                        <p class="text-lg text-gray-200 mb-8">Master project delivery, user interaction, and business insights while learning to manage and execute projects independently.</p>
-                        <a href="sb-intermediate-track.html" class="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition">Details</a>
+                    <div class="bg-gray-800 bg-opacity-80 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Intermediate Track</h4>
+                        <p class="text-sm md:text-lg text-gray-200 mb-6">Master project delivery, user interaction, and
+                            business insights while learning to manage and execute projects independently.</p>
+                        <a href="sb-intermediate-track.html"
+                            class="bg-yellow-500 text-black py-2 px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg font-bold hover:bg-yellow-600 transition">Details</a>
                     </div>
-                    <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                        <h4 class="text-2xl font-semibold text-yellow-300 mb-8">Advanced Track</h4>
-                        <p class="text-lg text-gray-200 mb-8">From AI integration to business strategy, learn to design scalable products, craft investment pitches, and lead your own ventures.</p>
-                        <a  class="bg-yellow-800 text-black py-3 px-8 rounded-full text-lg font-bold hover:bg-yellow-600 transition disabled:pointer-events-disable">Coming Soon</a>
+                    <div class="bg-gray-800 bg-opacity-80 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                        <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-4">Advanced Track</h4>
+                        <p class="text-sm md:text-lg text-gray-200 mb-6">From AI integration to business strategy, learn
+                            to design scalable products, craft investment pitches, and lead your own ventures.</p>
+                        <a
+                            class="bg-yellow-800 text-black py-2 px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg font-bold hover:bg-yellow-600 transition">Coming
+                            Soon</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Mentors Section -->
-        <section id="mentors" class="py-24 bg-gray-800 bg-opacity-80 ">
-        <!-- bg-gradient-to-t from-gray-900 via-gray-800 to-gray-900"> -->
+        <section id="mentors" class="py-24 bg-gray-800 bg-opacity-80 px-4">
             <div class="container mx-auto text-center">
-                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Meet Our Mentors</h3>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-12">Meet Our Mentors</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
                     <a href="ekavakra-profile.html" class="block">
-                        <div class="bg-gray-800 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                            <img src="./images/ekavakra.webp" alt="Ekavakra" class="w-32 h-32 mx-auto rounded-full mb-6">
-                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Ekavakra Vagare</h4>
-                            <p class="text-sm text-gray-200">Tech Lead  | 5+ years of experience</p>
+                        <div
+                            class="bg-gray-800 bg-opacity-90 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/ekavakra.webp" alt="Ekavakra"
+                                class="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full mb-4">
+                            <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-2">Ekavakra Vagare</h4>
+                            <p class="text-sm text-gray-200">Tech Lead | 5+ years of experience</p>
                         </div>
                     </a>
-                
                     <a href="amit-profile.html" class="block">
-                        <div class="bg-gray-800 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                            <img src="./images/amit.webp" alt="Amit Kumar" class=" h-32 mx-auto rounded-full mb-6">
-                            <h4 class="text-2xl font-semibold text-yellow-300">Amit Kumar</h4>
-                            <p class="text-sm text-gray-200">DevOps Engineer  | 3+ years of experience</p>
-                        </div> 
-                    </a>
-                    <a href="rishab-profile.html" class="block">
-                        <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                            <img src="./images/rishab.webp" alt="Rishab Kushawah" class="w-32 h-32 mx-auto rounded-full mb-6">
-                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Rishab Kushawah</h4>
-                            <p class="text-sm text-gray-200">Assistand Professor  | 1+ years of experience</p>
+                        <div
+                            class="bg-gray-800 bg-opacity-90 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/amit.webp" alt="Amit Kumar"
+                                class="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full mb-4">
+                            <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-2">Amit Kumar</h4>
+                            <p class="text-sm text-gray-200">DevOps Engineer | 3+ years of experience</p>
                         </div>
                     </a>
+                    <!-- <a href="rishab-profile.html" class="block">
+                        <div
+                            class="bg-gray-800 bg-opacity-90 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/rishab.webp" alt="Rishab Kushawah"
+                                class="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full mb-4">
+                            <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-2">Rishab Kushawah</h4>
+                            <p class="text-sm text-gray-200">Assistant Professor | 1+ years of experience</p>
+                        </div>
+                    </a> -->
                     <a href="krishna-profile.html" class="block">
-                        <div class="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                            <img src="./images/krishna.webp" alt="Krishna P. Singh" class="w-32 h-32 mx-auto rounded-full mb-6">
-                            <h4 class="text-2xl font-semibold text-yellow-300 mb-2">Krishna P. Singh</h4>
-                            <p class="text-sm text-gray-200">Business Risk Analyst   | 1+ years of experience</p>
+                        <div
+                            class="bg-gray-800 bg-opacity-90 p-6 md:p-8 rounded-lg shadow-md hover:shadow-xl transition">
+                            <img src="./images/krishna.webp" alt="Krishna P. Singh"
+                                class="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full mb-4">
+                            <h4 class="text-xl md:text-2xl font-semibold text-yellow-300 mb-2">Krishna P. Singh</h4>
+                            <p class="text-sm text-gray-200">Business Risk Analyst | 1+ years of experience</p>
                         </div>
                     </a>
                 </div>
             </div>
         </section>
 
+
         <!-- Contact Section -->
-        <section id="contact" class="py-24" style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
+        <section id="contact" class="py-24 px-4"
+            style="background-image: url('./images/contacts.webp'); background-size: cover; background-blend-mode: multiply; background-color: rgba(0, 0, 0, 0.6);">
             <div class="container mx-auto text-center">
-                <h3 class="text-4xl font-bold text-yellow-300 mb-12">Get in Touch</h3>
-                <form class="max-w-lg mx-auto">
-                    <div class="mb-6">
-                        <input type="text" placeholder="Your Name" class="w-full p-4 bg-gray-800 bg-opacity-80 rounded-lg text-white">
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-8 md:mb-12">Get in Touch</h3>
+                <form class="max-w-md md:max-w-lg mx-auto">
+                    <div class="mb-4 md:mb-6">
+                        <input type="text" placeholder="Your Name"
+                            class="w-full p-3 md:p-4 bg-gray-800 bg-opacity-80 rounded-lg text-sm md:text-lg text-white"
+                            required />
                     </div>
-                    <div class="mb-6">
-                        <input type="email" placeholder="Your Email" class="w-full p-4 bg-gray-800 bg-opacity-80 rounded-lg text-white">
+                    <div class="mb-4 md:mb-6">
+                        <input type="email" placeholder="Your Email"
+                            class="w-full p-3 md:p-4 bg-gray-800 bg-opacity-80 rounded-lg text-sm md:text-lg text-white"
+                            required />
                     </div>
-                    <div class="mb-6">
-                        <textarea placeholder="Your Message" class="w-full p-4 bg-gray-800 bg-opacity-80 rounded-lg text-white"></textarea>
+                    <div class="mb-4 md:mb-6">
+                        <textarea placeholder="Your Message"
+                            class="w-full p-3 md:p-4 bg-gray-800 bg-opacity-80 rounded-lg text-sm md:text-lg text-white"
+                            required></textarea>
                     </div>
-                    <button class="bg-yellow-500 text-black py-3 px-8 rounded-full font-bold hover:bg-yellow-600 transition">Send Message</button>
+                    <button
+                        class="bg-yellow-500 text-black py-2 px-6 md:py-3 md:px-8 rounded-full font-bold hover:bg-yellow-600 transition text-sm md:text-lg">
+                        Send Message
+                    </button>
                 </form>
             </div>
         </section>
+
+        <!-- End of main -->
+
     </main>
 
-    <footer class="bg-black py-6">
+    <!-- Footer -->
+
+    <footer class="bg-black py-6 px-4">
         <div class="container mx-auto text-center">
-            <p class="text-sm text-yellow-300">&copy; 2024 ProDev Bootcamp. All Rights Reserved.</p>
+            <p class="text-xs md:text-sm text-yellow-300">&copy; 2024 ProDev Bootcamp. All Rights Reserved.</p>
         </div>
     </footer>
+
 </body>
+
 </html>
