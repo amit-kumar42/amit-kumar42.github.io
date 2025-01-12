@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sci-Fi Horizons</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+      font-family: 'Orbitron', sans-serif;
+      color: #e0e0e0;
+    }
+    .highlight {
+      color: #0ff;
+    }
+    .button {
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+      color: #fff;
+      text-transform: uppercase;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+    }
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 1);
+    }
+    .section {
+      padding: 4rem 1rem;
+    }
+    .neon-frame {
+      border: 2px solid rgba(0, 255, 255, 0.5);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.4);
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .hologram {
+      background: linear-gradient(180deg, rgba(0, 255, 255, 0.1), rgba(0, 0, 0, 0));
+      color: rgba(0, 255, 255, 0.8);
+      text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <!-- Header -->
+  <header class="w-full bg-black py-4 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <div class="text-lg font-bold highlight">Sci-Fi Horizons</div>
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#home" class="hover:text-cyan-400">Home</a>
+        <a href="#explore" class="hover:text-cyan-400">Explore</a>
+        <a href="#features" class="hover:text-cyan-400">Features</a>
+        <a href="#contact" class="hover:text-cyan-400">Contact</a>
+      </nav>
+      <button id="menu-button" class="md:hidden text-gray-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="section text-center bg-black">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold hologram">Welcome to the Future</h1>
+      <p class="mt-4 text-lg text-gray-400">Your journey to tomorrow starts today.</p>
+      <button class="mt-6 px-8 py-4 rounded-md button">Explore Now</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section text-center bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold highlight">Features</h2>
+      <p class="mt-2 text-gray-400">Cutting-edge technologies built for the next era.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div class="p-6 neon-frame rounded-lg">
+          <h3 class="text-xl font-semibold highlight">Holographic UI</h3>
+          <p class="mt-2 text-gray-400">Immerse yourself in futuristic interfaces.</p>
+        </div>
+        <div class="p-6 neon-frame rounded-lg">
+          <h3 class="text-xl font-semibold highlight">AI Integration</h3>
+          <p class="mt-2 text-gray-400">Smart solutions for smarter workflows.</p>
+        </div>
+        <div class="p-6 neon-frame rounded-lg">
+          <h3 class="text-xl font-semibold highlight">Cybersecurity</h3>
+          <p class="mt-2 text-gray-400">Keeping your data safe in the digital age.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section bg-black text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold highlight">Be a Pioneer</h2>
+      <p class="mt-2 text-gray-400">Step into the unknown and lead the way.</p>
+      <button class="mt-6 px-8 py-4 rounded-md button">Join Us</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6 text-center text-gray-500">
+    <p>© 2024 Sci-Fi Horizons. Explore Beyond Limits.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-button').addEventListener('click', () => {
+      // Add mobile menu functionality
+    });
+  </script>
+</body>
+</html>

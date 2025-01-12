@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artistic Future</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e293b 0%, #1a1a2e 100%);
+      font-family: 'Poppins', sans-serif;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-overlay {
+      background: radial-gradient(circle, rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+    }
+  </style>
+</head>
+<body class="text-white">
+  <!-- Header -->
+  <header class="fixed w-full z-10 bg-opacity-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between py-4">
+      <img src="./images/logo.png" alt="Logo" class="h-10">
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="text-gray-300 hover:text-white transition">Home</a>
+        <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+        <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+        <a href="#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+        <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+      </nav>
+      <button class="md:hidden text-gray-300" id="menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('./images/hero-sample.webp');">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative text-center">
+      <h1 class="text-6xl md:text-8xl font-extrabold gradient-text">Innovating Tomorrow</h1>
+      <p class="text-lg md:text-2xl mt-4 text-gray-400">Where Art Meets Technology</p>
+      <a href="#features" class="mt-6 inline-block bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-purple-500 hover:to-indigo-500 text-white px-6 py-3 rounded-md font-semibold shadow-lg">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-8 gradient-text">Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="space-y-4 bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div class="text-indigo-400 text-6xl">&#9889;</div>
+          <h3 class="text-2xl font-semibold">Next-Gen Tools</h3>
+          <p class="text-gray-300">Crafting solutions for a dynamic digital world.</p>
+        </div>
+        <div class="space-y-4 bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div class="text-indigo-400 text-6xl">&#128640;</div>
+          <h3 class="text-2xl font-semibold">Infinite Scalability</h3>
+          <p class="text-gray-300">Adaptable to your growth and aspirations.</p>
+        </div>
+        <div class="space-y-4 bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div class="text-indigo-400 text-6xl">&#127912;</div>
+          <h3 class="text-2xl font-semibold">Seamless Integration</h3>
+          <p class="text-gray-300">Blending into your workflow with precision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta" class="py-16 bg-gradient-to-r from-indigo-500 to-purple-500">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-white">Ready to Transform Your Vision?</h2>
+      <p class="text-lg text-gray-200 mt-4">Join us on a journey to redefine what's possible.</p>
+      <a href="#contact" class="mt-6 inline-block bg-white text-indigo-600 px-8 py-4 rounded-md font-semibold shadow-md hover:bg-gray-100">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-gray-500">© 2024 Artistic Future. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById('menu-button').addEventListener('click', () => {
+      // Add functionality for mobile menu toggle
+    });
+  </script>
+</body>
+</html>

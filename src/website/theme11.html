@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Development Course</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: #f3f4f6;
+      font-family: 'Inter', sans-serif;
+      color: #1f2937;
+    }
+    .highlight {
+      color: #3b82f6;
+    }
+    .button {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    }
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
+    }
+    .section {
+      padding: 4rem 1rem;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+    }
+    footer {
+      background: #1e293b;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="w-full bg-white py-4 shadow-md sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <div class="text-lg font-bold highlight">Software Development Course</div>
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#home" class="hover:text-blue-500">Home</a>
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#modules" class="hover:text-blue-500">Modules</a>
+        <a href="#enroll" class="hover:text-blue-500">Enroll</a>
+      </nav>
+      <button id="menu-button" class="md:hidden text-gray-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="section bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold highlight">Transform Your Career</h1>
+      <p class="mt-4 text-lg">Gain industry-relevant skills in software development through hands-on projects and expert guidance.</p>
+      <button class="mt-6 button">Start Now</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold highlight">Why Choose Us?</h2>
+      <p class="mt-4 text-gray-600">We provide a curriculum designed by industry professionals to prepare you for real-world challenges in software development. From basics to advanced topics, we ensure comprehensive learning.</p>
+    </div>
+  </section>
+
+  <!-- Modules Section -->
+  <section id="modules" class="section bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold highlight text-center">What You'll Learn</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div class="card">
+          <h3 class="text-xl font-semibold highlight">Module 1: Programming Foundations</h3>
+          <p class="mt-2">Master the core concepts of programming, algorithms, and problem-solving techniques.</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-semibold highlight">Module 2: Building Web Applications</h3>
+          <p class="mt-2">Learn to design and develop modern web applications with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-semibold highlight">Module 3: Backend Development</h3>
+          <p class="mt-2">Understand server-side programming, API creation, and database management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enrollment Section -->
+  <section id="enroll" class="section bg-blue-50 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold highlight">Enroll Now</h2>
+      <p class="mt-2 text-gray-600">Kickstart your journey to becoming a skilled software developer. Secure your spot today!</p>
+      <button class="mt-6 button">Join Us</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-lg font-semibold highlight">Stay Updated</h2>
+      <form class="mt-4 flex justify-center">
+        <input type="email" class="border p-2 rounded-l-md" placeholder="Your email address">
+        <button class="button rounded-r-md">Subscribe</button>
+      </form>
+      <p class="mt-6">© 2024 Software Development Course. Empower Your Future.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-button').addEventListener('click', () => {
+      // Add mobile menu functionality
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature-Inspired Elegance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #edf2f7, #e2e8f0);
+      font-family: 'Merriweather', serif;
+      color: #2d3748;
+    }
+    .highlight {
+      color: #38a169;
+    }
+    .nature-section {
+      background: linear-gradient(135deg, #68d391, #48bb78);
+      clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+      color: #fff;
+      padding: 3rem;
+      text-align: center;
+    }
+    .button {
+      background: linear-gradient(90deg, #38a169, #2f855a);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 10px rgba(56, 161, 105, 0.3);
+    }
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(56, 161, 105, 0.5);
+    }
+    .section {
+      padding: 4rem 1rem;
+    }
+    .nature-card {
+      background: #edf2f7;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .nature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <!-- Header -->
+  <header class="w-full bg-white shadow-md py-4 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <div class="text-lg font-bold highlight">Nature-Inspired</div>
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#home" class="hover:text-green-600">Home</a>
+        <a href="#explore" class="hover:text-green-600">Explore</a>
+        <a href="#features" class="hover:text-green-600">Features</a>
+        <a href="#contact" class="hover:text-green-600">Contact</a>
+      </nav>
+      <button id="menu-button" class="md:hidden text-gray-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="section text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="nature-section">
+        <h1 class="text-5xl font-bold">Welcome to Nature-Inspired Design</h1>
+        <p class="mt-4 text-lg">Where harmony and elegance meet creativity.</p>
+      </div>
+      <button class="mt-6 button">Explore More</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold highlight text-center">Features</h2>
+      <p class="mt-2 text-center text-gray-600">Inspired by nature, crafted with care.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div class="nature-card">
+          <h3 class="text-xl font-semibold highlight">Organic Design</h3>
+          <p class="mt-2">Seamless and flowing structures inspired by nature.</p>
+        </div>
+        <div class="nature-card">
+          <h3 class="text-xl font-semibold highlight">Sustainable Aesthetics</h3>
+          <p class="mt-2">Beauty that respects the environment.</p>
+        </div>
+        <div class="nature-card">
+          <h3 class="text-xl font-semibold highlight">Effortless Adaptability</h3>
+          <p class="mt-2">Responsive designs that fit any context.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold highlight">Design for a Better Tomorrow</h2>
+      <p class="mt-2 text-gray-600">Let nature inspire your creativity.</p>
+      <button class="mt-6 button">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-500">
+    <p>© 2024 Nature-Inspired Design. Designed by Nature.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-button').addEventListener('click', () => {
+      // Add mobile menu functionality
+    });
+  </script>
+</body>
+</html>

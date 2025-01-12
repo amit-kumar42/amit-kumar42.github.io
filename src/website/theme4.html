@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Fun</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f9fafb, #dbeafe);
+      font-family: 'Inter', sans-serif;
+      color: #1f2937;
+    }
+    .highlight {
+      color: #2563eb;
+    }
+    .interactive:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    .section {
+      padding: 4rem 1rem;
+    }
+    .bubble {
+      animation: float 5s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <!-- Header -->
+  <header class="w-full bg-white shadow-sm sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="text-lg font-bold highlight">FunBrand</div>
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#home" class="hover:highlight">Home</a>
+        <a href="#explore" class="hover:highlight">Explore</a>
+        <a href="#features" class="hover:highlight">Features</a>
+        <a href="#contact" class="hover:highlight">Contact</a>
+      </nav>
+      <button id="menu-button" class="md:hidden text-gray-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="section bg-gradient-to-r from-blue-400 to-purple-500 text-center">
+    <div class="max-w-4xl mx-auto relative">
+      <div class="absolute inset-0 flex justify-center items-center">
+        <div class="w-16 h-16 bg-white rounded-full bubble shadow-md"></div>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold text-white">Welcome to FunBrand</h1>
+      <p class="mt-4 text-lg text-gray-100">Discover a world of interactivity and creativity.</p>
+      <button class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-semibold shadow-md interactive">Explore More</button>
+    </div>
+  </section>
+
+  <!-- Interactive Features Section -->
+  <section id="explore" class="section bg-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold highlight">Interactive Experiences</h2>
+      <p class="mt-2 text-gray-500">Engage with features that come alive as you explore.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div class="p-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg shadow interactive">
+          <h3 class="text-xl font-semibold highlight">Interactive Animations</h3>
+          <p class="mt-2 text-gray-600">Hover over elements to see them react!</p>
+        </div>
+        <div class="p-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg shadow interactive">
+          <h3 class="text-xl font-semibold highlight">Dynamic Layouts</h3>
+          <p class="mt-2 text-gray-600">Experience responsive and fluid designs.</p>
+        </div>
+        <div class="p-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg shadow interactive">
+          <h3 class="text-xl font-semibold highlight">Engaging Elements</h3>
+          <p class="mt-2 text-gray-600">Elements that make you smile as you explore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="features" class="section bg-blue-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold highlight">Create Your Fun Space</h2>
+      <p class="mt-2 text-gray-600">A space designed for creativity and joy.</p>
+      <button class="mt-6 inline-block bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-md shadow-md interactive">Start Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-500 to-purple-500 py-8 text-center text-white">
+    <p>© 2024 FunBrand. Bringing Fun to Life!</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-button').addEventListener('click', () => {
+      // Add mobile menu functionality
+    });
+  </script>
+</body>
+</html>
