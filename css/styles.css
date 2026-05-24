@@ -1299,4 +1299,9 @@ img {
     margin-left: var(--mb-1);
   }
 }
+/* Monochrome SVG logos: invert in dark mode so they stay visible */
+body.dark-theme .services-content img.logo-mono {
+  filter: invert(1);
+}
+
 /*# sourceMappingURL=styles.css.map */
